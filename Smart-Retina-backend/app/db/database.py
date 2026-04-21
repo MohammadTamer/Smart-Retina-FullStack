@@ -10,11 +10,12 @@ load_dotenv()
 db_user = os.getenv("DB_USER", "root")
 db_password = os.getenv("DB_PASSWORD", "")
 db_host = os.getenv("DB_HOST", "localhost")
+db_port = os.getenv("DB_PORT", "3306")
 db_name = os.getenv("DB_NAME", "smart_retina_db")
 
 encoded_password = quote_plus(db_password)
 print(encoded_password)
-SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{db_user}:{encoded_password}@{db_host}:3306/{db_name}"
+SQLALCHEMY_DATABASE_URL = f"mysql+pymysql://{db_user}:{encoded_password}@{db_host}:{db_port}/{db_name}"
 if not SQLALCHEMY_DATABASE_URL:
     raise ValueError("DATABASE_URL is not set in the .env file")
 

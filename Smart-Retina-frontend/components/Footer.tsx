@@ -22,8 +22,21 @@ const Footer: React.FC = () => {
             <span className="text-sm text-blue-100 font-medium tracking-wide">
               Faculty of Computer and Information Science
             </span>
+
+            {/* السطر الجديد Bold */}
+            <span className="text-sm text-blue-200 font-bold mt-1">
+              Ain Shams University
+            </span>
+
             <span className="text-xs text-blue-300 mt-1">
-              Supervised by: <span className="text-white font-medium">Dr. Dina Elsayad</span> , <span className="text-white font-medium">T.A. Manar Sultan</span>
+              Supervised by:{" "}
+              <span className="text-white font-medium">
+                Dr. Dina Elsayad
+              </span>{" "}
+              ,{" "}
+              <span className="text-white font-medium">
+                T.A. Manar Sultan
+              </span>
             </span>
           </div>
         </div>
